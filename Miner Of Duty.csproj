@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{07056696-1040-4A2B-A6CB-D7163D9DAE70}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Miner_Of_Duty</RootNamespace>
+    <AssemblyName>Miner Of Duty</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>a853ee81-553a-4b47-a3a1-5f21953c49d4</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>thumb.png</Thumbnail>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>true</XnaCompressContent>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <XnaCompressContent>true</XnaCompressContent>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasyStorage">
+      <HintPath>..\..\..\Librarys\EasyStorage\Xbox\EasyStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices" />
+    <Reference Include="Microsoft.Xna.Framework.Xact" />
+    <Reference Include="Microsoft.Xna.Framework.Video" />
+    <Reference Include="Microsoft.Xna.Framework.Avatar" />
+    <Reference Include="Microsoft.Xna.Framework.Net" />
+    <Reference Include="Microsoft.Xna.Framework.Storage" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio.cs" />
+    <Compile Include="BinaryWriterExtension.cs" />
+    <Compile Include="CrashedGame.cs" />
+    <Compile Include="EndianBitConverter.cs" />
+    <Compile Include="FrameRateCounter.cs" />
+    <Compile Include="Game\ArmAnimation.cs" />
+    <Compile Include="Game\AStar\AStar.cs" />
+    <Compile Include="Game\Block.cs" />
+    <Compile Include="Game\Camera.cs" />
+    <Compile Include="Game\CountedRandom.cs" />
+    <Compile Include="Game\Editor\EditorInventory.cs" />
+    <Compile Include="Game\Editor\EditorWeaponDrop.cs" />
+    <Compile Include="Game\Editor\MapGameInfoLoader.cs" />
+    <Compile Include="Game\Editor\PlayerEditor.cs" />
+    <Compile Include="Game\Editor\RangeMenu.cs" />
+    <Compile Include="Game\Editor\SpawnPoint.cs" />
+    <Compile Include="Game\Editor\WorldEditor.cs" />
+    <Compile Include="Game\EffectsManager.cs" />
+    <Compile Include="Game\FooPacket.cs" />
+    <Compile Include="Game\Goggles.cs" />
+    <Compile Include="Game\Grenade.cs" />
+    <Compile Include="Game\GrenadeManager.cs" />
+    <Compile Include="Game\GunType.cs" />
+    <Compile Include="Game\IHasCash.cs" />
+    <Compile Include="Game\InfoScreen.cs" />
+    <Compile Include="Game\Inventory.cs" />
+    <Compile Include="Game\ITerrainOwner.cs" />
+    <Compile Include="Game\LightManager.cs" />
+    <Compile Include="Game\Liquid.cs" />
+    <Compile Include="Game\LiquidManager.cs" />
+    <Compile Include="Game\MapSender.cs" />
+    <Compile Include="Game\MultiplayerGame.cs" />
+    <Compile Include="Game\MultiplayerGame2.cs" />
+    <Compile Include="Game\Networking\MovementPacket.cs" />
+    <Compile Include="Game\Networking\Packet.cs" />
+    <Compile Include="Game\Networking\RollingAverage.cs" />
+    <Compile Include="Game\ParticleSystem\FlashBangParticleSystem.cs" />
+    <Compile Include="Game\ParticleSystem\FragParticleSystem.cs" />
+    <Compile Include="Game\ParticleSystem\ParticleSystem.cs" />
+    <Compile Include="Game\ParticleSystem\ParticleVertex.cs" />
+    <Compile Include="Game\ParticleSystem\SmokeParticleSystem.cs" />
+    <Compile Include="Game\PitfallBlock.cs" />
+    <Compile Include="Game\Player.cs" />
+    <Compile Include="Game\PlayerBody.cs" />
+    <Compile Include="Game\SwamStoreMenu.cs" />
+    <Compile Include="Game\Swarmie.cs" />
+    <Compile Include="Game\SwarmieManager.cs" />
+    <Compile Include="Game\TeamManager.cs" />
+    <Compile Include="Game\Terrain.cs" />
+    <Compile Include="Game\TerrainGenerator.cs" />
+    <Compile Include="Game\ToolType.cs" />
+    <Compile Include="Game\Vectori.cs" />
+    <Compile Include="Game\VertexTypes.cs" />
+    <Compile Include="Game\WeaponDropManager.cs" />
+    <Compile Include="Game\WinChecker.cs" />
+    <Compile Include="IGameScreen.cs" />
+    <Compile Include="Input.cs" />
+    <Compile Include="LobbyCode\ClassViewer.cs" />
+    <Compile Include="LobbyCode\CustomLobby.cs" />
+    <Compile Include="LobbyCode\CustomSearchLobby.cs" />
+    <Compile Include="LobbyCode\GameModes.cs" />
+    <Compile Include="LobbyCode\GamePlayerStats.cs" />
+    <Compile Include="LobbyCode\ILobby.cs" />
+    <Compile Include="LobbyCode\Lobby.cs" />
+    <Compile Include="LobbyCode\MapEditLobby.cs" />
+    <Compile Include="LobbyCode\SearchLobby.cs" />
+    <Compile Include="LZF.cs" />
+    <Compile Include="LZMA\Common\CommandLineParser.cs" />
+    <Compile Include="LZMA\Common\CRC.cs" />
+    <Compile Include="LZMA\ICoder.cs" />
+    <Compile Include="LZMA\LzmaAlone.cs" />
+    <Compile Include="LZMA\LzmaBench.cs" />
+    <Compile Include="LZMA\LZMA\LzmaBase.cs" />
+    <Compile Include="LZMA\LZMA\LzmaDecoder.cs" />
+    <Compile Include="LZMA\LZMA\LzmaEncoder.cs" />
+    <Compile Include="LZMA\LZ\IMatchFinder.cs" />
+    <Compile Include="LZMA\LZ\LzBinTree.cs" />
+    <Compile Include="LZMA\LZ\LzInWindow.cs" />
+    <Compile Include="LZMA\LZ\LzOutWindow.cs" />
+    <Compile Include="LZMA\RangeCoder\RangeCoder.cs" />
+    <Compile Include="LZMA\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="LZMA\RangeCoder\RangerCoderBitTree.cs" />
+    <Compile Include="Menus\CreateAMapMenu.cs" />
+    <Compile Include="Menus\EditCharacter.cs" />
+    <Compile Include="Menus\EditClasses.cs" />
+    <Compile Include="Menus\IMenuOwner.cs" />
+    <Compile Include="Menus\InEditorMenu.cs" />
+    <Compile Include="Menus\InGameMenu.cs" />
+    <Compile Include="Menus\MainMenu.cs" />
+    <Compile Include="Menus\MapMetaInfo.cs" />
+    <Compile Include="Menus\MapSearchList.cs" />
+    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\MenuElement.cs" />
+    <Compile Include="Menus\NameFilter.cs" />
+    <Compile Include="Menus\PlayerPermissions.cs" />
+    <Compile Include="Menus\ProfileViewer.cs" />
+    <Compile Include="MessageBox.cs" />
+    <Compile Include="PlayerProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="MinerOfDuty.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="SpecialGamer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </Content>
+    <Content Include="thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Miner Of DutyContent\Miner Of DutyContent.contentproj">
+      <Name>Miner Of DutyContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{E53C9002-6611-49E6-B443-36E97AEAE418}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
