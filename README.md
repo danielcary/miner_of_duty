@@ -1,0 +1,1 @@
+# miner_of_duty
